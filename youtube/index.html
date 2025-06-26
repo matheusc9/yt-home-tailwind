@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <header class="fixed top 0 right-0 left-0 bg-white z-50 px-4 py-2 flex items-center border-b border-gray-200 justify-between">
+
+        <div class="flex items-center gap-4">
+            <button class="p-2 rounded-full hover:bg-gray-200 cursor-pointer" onclick="showMenu()">
+                <i class="ri-menu-fill text-xl"></i>
+            </button>
+        
+
+            <div class="left-0 flex items-center gap-1 cursor-pointer">
+                <i class="ri-youtube-fill text-3xl text-red-600"></i>
+                <span class="text-xl font-semibold">Youtube</span>
+            </div>
+        </div>
+
+        <form class="flex-1 max-w-2xl mx-4 flex">
+            <input type="text" placeholder="Search"
+            class="flex-1 px-4 border border-gray-300 rounded-l-full rounded-r-0">
+
+            <button class="px-6 py-2 bg-gray-50 border border-l-0 border-gray-300 rounded-r-full cursor-pointer">
+                <i class="ri-search-line"></i>
+            </button>
+
+            <button class="ml-2 px-6 py-2 bg-gray-100 rounded-full hover:bg-gray-200 cursor-pointer"> 
+                <i class="ri-mic-line"> </i>
+            </button>
+        </form>
+
+        <div class="flex items-center gap-2">
+            <button class="p-2 hover:bg-gray-200 rounded-full cursor-pointer">
+                <i class="ri-video-add-line text-xl"></i>
+            </button>
+
+            <button class="p-2 hover:bg-gray-200 rounded-full cursor-pointer">
+                <i class="ri-notification-3-line text-xl"></i>
+            </button>
+
+            <button class="ml-2 w-8 h-8 bg-purple-600 rounded-full text-white font-semibold cursor-pointer">
+                M
+            </button>
+        </div>
+    </header>
+
+    <div class="flex pt-14">
+        <aside class="fixed left-0 top-14 w-60 bg-white overflow-y-auto py-6" id="menubar">
+            <nav class="space-y-1">
+                <a href="#" class="flex items-center gap-6 px-6 py-2 bg-gray-100">
+                    <i class="ri-home-4-fill text-xl"></i>
+                    <span class="text-sm font-medium">Home</span>
+                </a>
+                <a href="#" class="flex items-center gap-6 px-6 py-2 hover:bg-gray-100">
+                    <i class="ri-compass-3-line text-xl"></i>
+                    <span class="text-sm font-medium">Explore</span>
+                </a>
+                <a href="#" class="flex items-center gap-6 px-6 py-2 hover:bg-gray-100">
+                    <i class="ri-play-list-2-line text-xl"></i>
+                    <span class="text-sm font-medium">Subscriptions</span>
+                </a>
+
+                <hr class="mx-6 my-3 text-gray-200">
+
+                <a href="#" class="flex items-center gap-6 px-6 py-2 hover:bg-gray-100">
+                    <i class="ri-history-line text-xl"></i>
+                    <span class="text-sm font-medium">History</span>
+                </a>
+                <a href="#" class="flex items-center gap-6 px-6 py-2 hover:bg-gray-100">
+                    <i class="ri-time-line text-xl"></i>
+                    <span class="text-sm font-medium">Watch later</span>
+                </a>
+                <a href="#" class="flex items-center gap-6 px-6 py-2 hover:bg-gray-100">
+                    <i class="ri-thumb-up-line text-xl"></i>
+                    <span class="text-sm font-medium">Liked Videos</span>
+                </a>
+
+                <hr class="mx-6 my-3 text-gray-200">
+
+                <h3 class="px-6 py-2 text-sm font-medium text-gray-900">Channels</h3>
+                <a href="#" class="flex items-center gap-6 px-6 py-2 hover:bg-gray-100">
+                    <div class="w-6 h-6 bg-red-500 rounded-full"></div>
+                    <span class="text-sm font-medium">Channel name</span>
+                </a>
+
+            </nav>
+        </aside>
+    </div>
+
+    <!-- Main Content -->
+        <main class="flex-1 ml-60 p-6">
+            <!-- Category Pills -->
+            <div class="flex gap-3 mb-6 overflow-x-auto pb-2">
+                <button class="px-3 py-1 bg-gray-900 text-white rounded-lg text-sm whitespace-nowrap cursor-pointer">All</button>
+                <button class="px-3 py-1 bg-gray-100 hover:bg-gray-200 rounded-lg text-sm whitespace-nowrap cursor-pointer">Songs</button>
+                <button class="px-3 py-1 bg-gray-100 hover:bg-gray-200 rounded-lg text-sm whitespace-nowrap cursor-pointer">Games</button>
+                <button class="px-3 py-1 bg-gray-100 hover:bg-gray-200 rounded-lg text-sm whitespace-nowrap cursor-pointer">Coding</button>
+                <button class="px-3 py-1 bg-gray-100 hover:bg-gray-200 rounded-lg text-sm whitespace-nowrap cursor-pointer">Live</button>
+                <button class="px-3 py-1 bg-gray-100 hover:bg-gray-200 rounded-lg text-sm whitespace-nowrap cursor-pointer">Podcast</button>
+                <button class="px-3 py-1 bg-gray-100 hover:bg-gray-200 rounded-lg text-sm whitespace-nowrap cursor-pointer">Culinary</button>
+                <button class="px-3 py-1 bg-gray-100 hover:bg-gray-200 rounded-lg text-sm whitespace-nowrap cursor-pointer">News</button>
+                <button class="px-3 py-1 bg-gray-100 hover:bg-gray-200 rounded-lg text-sm whitespace-nowrap cursor-pointer">Sports</button>
+            </div>
+
+            <!-- Videos Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4" id="videos"></div>
+        </main>
+    </div>
+
+    <script>
+        // Variaveis
+        let enableMenu = true
+        const menubar = document.getElementById('menubar')
+
+        // Dados dos vídeos
+        const videos = [
+            { title: "TypeScript Tips & Tricks - Next Level Productivity", channel: "TS Brazil", views: "145K", time: "6 days ago", duration: "19:45", color: "rose", isLive: false },
+            { title: "🔴 LIVE - Playing GTA 6 LIVE!", channel: "GamePlayBR", views: "2.4M", time: "now", duration: null, color: "red", isLive: true },
+            { title: "LoFi Music for Coding", channel: "Relax Code", views: "980K", time: "2 days ago", duration: "52:00", color: "amber", isLive: false },
+            { title: "React Hooks in Practice - Complete Guide", channel: "Code Master", views: "320K", time: "4 days ago", duration: "41:20", color: "blue", isLive: false },
+            { title: "Vlog in Tokyo - Culture & Food", channel: "Life Around the World", views: "710K", time: "7 days ago", duration: "16:00", color: "emerald", isLive: false },
+            { title: "Official Trailer - Tech Movie 2025", channel: "Cine Mania", views: "3.2M", time: "10 days ago", duration: "2:45", color: "violet", isLive: false },
+            { title: "🔴 LIVE Coding - Building a Fullstack App", channel: "DevLive", views: "540K", time: "live", duration: null, color: "red", isLive: true },
+            { title: "The Power of an API in a Project", channel: "API Today", views: "430K", time: "5 days ago", duration: "13:50", color: "sky", isLive: false },
+            { title: "Electronic MIX 2025 🔥", channel: "Electro Beats", views: "2.9M", time: "9 days ago", duration: "85:00", color: "fuchsia", isLive: false },
+            { title: "Python for Beginners - Full Class", channel: "Simple Tech", views: "210K", time: "12 days ago", duration: "37:00", color: "indigo", isLive: false },
+            { title: "24H Challenge - Surviving in the Jungle!", channel: "Extreme Challenge", views: "1.6M", time: "14 days ago", duration: "28:00", color: "lime", isLive: false },
+            { title: "How to Go Viral on YouTube in 2025", channel: "Success Tips", views: "580K", time: "3 days ago", duration: "12:15", color: "cyan", isLive: false },
+        ];
+
+        // Renderiza os vídeos
+        const container = document.getElementById('videos');
+
+        videos.forEach((video, i) => {
+            const videoCard = document.createElement('article');
+            videoCard.className = 'cursor-pointer';
+            videoCard.innerHTML = `
+                <div class="relative bg-gray-200 rounded-xl overflow-hidden">
+                    <img src="https://picsum.photos/320/180?random=${i + 1}" alt="${video.title}" class="w-full h-full object-cover">
+                    <span class="absolute bottom-2 right-2 bg-black bg-opacity-80 text-white text-xs px-1 rounded">${video.duration}</span>
+                    ${video.isLive ? '<span class="absolute top-2 right-2 bg-red-600 text-white text-xs px-2 py-1 rounded uppercase font-semibold">Ao vivo</span>' : ''}
+                </div>
+                <div class="flex gap-3 mt-3">
+                    <div>
+                        <h3 class="font-medium text-sm line-clamp-2">${video.title}</h3>
+                        <p class="text-sm text-gray-600 mt-1">${video.channel}</p>
+                        <p class="text-sm text-gray-600">${video.isLive ? `${video.views} watching ${video.time}` : `${video.views} views • ${video.time}`}</p>
+                    </div>
+                </div>
+            `;
+            container.appendChild(videoCard);
+        });
+
+        function showMenu() {
+            enableMenu = !enableMenu;
+            menubar.style.display = enableMenu ? 'block' : 'none';
+
+            const main = document.querySelector('main');
+            if (enableMenu) {
+                main.classList.add('ml-60');
+            } else {
+                main.classList.remove('ml-60');
+            }
+        }
+    </script>
+</body>
+
+</html>
